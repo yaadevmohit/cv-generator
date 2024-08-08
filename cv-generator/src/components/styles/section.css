@@ -1,0 +1,10 @@
+.section-container > *{
+    margin: 0;
+}
+.section-container > h2 {
+    text-align: left;
+}
+
+.section-container > hr {
+    color: black;
+}

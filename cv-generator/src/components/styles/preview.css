@@ -1,0 +1,11 @@
+.preview-container {
+    width: 34rem;
+    height: 44rem;
+    border: 2px solid red;
+    padding: 0.6rem;
+}
+
+.preview-container > * {
+    margin-block: 0.4rem;
+    border: 1px solid red;
+}
