@@ -1,28 +1,75 @@
-header > * {
+.header {
+    position: relative;
+    --btn-clr: #BBE9FF;
+    --fs-size-primary: 1.5rem;
+    border: 1px solid transparent;
+}
+
+input, input:focus {
+    /* border: none; */
+    outline: none;
+}
+
+.header > * {
     margin-block: 0.2rem;
 }
 
-header {
-    h1, input {
-        font-size: 1.5rem;
+.header > input {
+    font-size: var(--fs-size-primary);
+    width: fit-content;
+    text-align: center;
+}
+
+.header {
+    h1{
+        font-size: var(--fs-size-primary);
         text-align: center;
+        font-weight: 600;
     }
-    input, input:focus {
+    button {
+        background-color: var(--btn-clr);
         border: none;
-        outline: none;
+        padding: 0.2rem 0.4rem;
+        position: absolute;
+        top: 0;
+        right: 0.4rem;
+        width: 4rem;
+        border-radius: 0.4rem;
+        display: none;
     }
 }
-header > ul {
+
+
+
+.about-info {
     display: flex;
     font-size: 0.8rem;
     justify-content: space-around;
     align-items: center;
+    flex-grow: 1;
 }
 
-header > ul > li:first-child {
+.header > ul > li:first-child {
     list-style-type: none;
 }
 
-header > ul > li {
+.header > ul > li {
     font-style: italic;
+}
+
+.header:hover, .header.editable {
+    border: 1px solid black;
+    button.edit {
+        display: block;
+    }
+}
+
+
+ul.about-info {
+    input, li {
+        font-size: 0.8rem;
+    }
+    input {
+        max-width: 5rem;
+    }
 }

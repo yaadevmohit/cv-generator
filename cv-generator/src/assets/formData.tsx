@@ -1,19 +1,20 @@
 export default {
-    about: {
+    About: {
         name: "Mohit Yadav",
+        city: "Toronto",
         email: "xyz@xyz.com",
         github: "github.com",
         linkedin: "linkedin.com",
         phone: "647-389-8460"
     },
-    objective: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam debitis, sint possimus quae pariatur laborum doloremque mollitia vitae minima, blanditiis reiciendis velit eos molestiae nemo, autem placeat sapiente. Ipsam?",
-    skills: [
+    Objective: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam debitis, sint possimus quae pariatur laborum doloremque mollitia vitae minima, blanditiis reiciendis velit eos molestiae nemo, autem placeat sapiente. Ipsam?",
+    Skills: [
         {
             skillsGroupName: "",
             skillGroupData: []
         },
     ],
-    workExp: [
+    WorkExp: [
         {
             companyName: "company name",
             jobTitle: "baller",
@@ -23,7 +24,7 @@ export default {
             expPts: []
         }
     ],
-    projects: [
+    Projects: [
         {
             projectName: "Library",
             websiteLink: "",
@@ -31,7 +32,7 @@ export default {
             detailPts: []
         }
     ],
-    education: [
+    Education: [
         {
             instituitionName: "",
             major: "",
@@ -40,7 +41,7 @@ export default {
             learningPts: []
         }
     ],
-    certifications: [
+    Certifications: [
         {
             name: "",
             institute: "",

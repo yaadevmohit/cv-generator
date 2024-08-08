@@ -5,12 +5,17 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   /* align-items: center; */
   justify-content: center;
   height: 100vh;
 }
+
 
 h1 {
   font-size: 1.4rem; 

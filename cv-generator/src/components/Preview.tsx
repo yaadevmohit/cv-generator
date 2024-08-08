@@ -7,10 +7,12 @@ import defaultData from "../assets/formData"
 const Preview = () => {
 
     const [data, setData] = useState(defaultData)
+    const {About, Objective, Skills, WorkExp, Projects, Education, Certifications} = data;
+
     return(
         <>
             <div className="preview-container humainst-normal">
-                <Header />
+                <Header aboutData={About}/>
                 <Section title="Objective"/>
                 <Section title="Skills"/>
                 <Section title="Work Experience"/>
