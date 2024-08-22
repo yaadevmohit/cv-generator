@@ -6,13 +6,23 @@ import defaultData from "../assets/formData"
 
 const Preview = () => {
 
-    const [data, setData] = useState(defaultData)
-    const {About, Objective, Skills, WorkExp, Projects, Education, Certifications} = data;
+    const [data, setData] = useState(defaultData);
+    console.log(data)
 
+    const handleChange = (event: InputEvent) => {
+        const {name, value} = event.target;
+        setData((prevData) => {
+            return({
+                ...prevData,
+                [name]: value,
+            })
+        })
+        console.log(data.About[name])
+    }
     return(
         <>
             <div className="preview-container humainst-normal">
-                <Header aboutData={About}/>
+                <Header name={data.name} aboutData={data.about} handleInputFn={handleChange}/>
                 <Section title="Objective"/>
                 <Section title="Skills"/>
                 <Section title="Work Experience"/>

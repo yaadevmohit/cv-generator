@@ -1,20 +1,20 @@
 export default {
-    About: {
-        name: "Mohit Yadav",
-        city: "Toronto",
-        email: "xyz@xyz.com",
-        github: "github.com",
-        linkedin: "linkedin.com",
-        phone: "647-389-8460"
-    },
-    Objective: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam debitis, sint possimus quae pariatur laborum doloremque mollitia vitae minima, blanditiis reiciendis velit eos molestiae nemo, autem placeat sapiente. Ipsam?",
-    Skills: [
+    name: "Mohit Yadav",
+    about: [
+        {id: 0, fieldname: "city", value: "Toronto"},
+        {id: 1, fieldName: "email", value: "xyz@xyz.com"},
+        {id: 2, fieldName: "github", value: "github.com"},
+        {id: 3, fieldName: "linkedin", value: "linkedin.com"},
+        {id: 4, fieldName: "phone", value: "647-389-8460"},
+    ],
+    objective: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam debitis, sint possimus quae pariatur laborum doloremque mollitia vitae minima, blanditiis reiciendis velit eos molestiae nemo, autem placeat sapiente. Ipsam?",
+    skills: [
         {
             skillsGroupName: "",
             skillGroupData: []
         },
     ],
-    WorkExp: [
+    workExp: [
         {
             companyName: "company name",
             jobTitle: "baller",
@@ -24,7 +24,7 @@ export default {
             expPts: []
         }
     ],
-    Projects: [
+    projects: [
         {
             projectName: "Library",
             websiteLink: "",
@@ -32,7 +32,7 @@ export default {
             detailPts: []
         }
     ],
-    Education: [
+    education: [
         {
             instituitionName: "",
             major: "",
@@ -41,7 +41,7 @@ export default {
             learningPts: []
         }
     ],
-    Certifications: [
+    certifications: [
         {
             name: "",
             institute: "",

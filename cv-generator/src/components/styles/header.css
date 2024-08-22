@@ -37,35 +37,43 @@ input, input:focus {
         border-radius: 0.4rem;
         display: none;
     }
+    .about-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        max-height: 3.9rem;
+        max-width: 32.5rem;
+        flex: 1;    
+    input, span {
+        font-size: 0.8rem;
+        width: fit-content;
+        text-align: center;
+        padding-inline: 1rem;
+    }
+    input {
+        max-width: 6rem;
+    }
+    }
+    .about-info > * + * {
+        border-left: 1px;
+    }
 }
 
 
 
-.about-info {
-    display: flex;
-    font-size: 0.8rem;
-    justify-content: space-around;
-    align-items: center;
-    flex-grow: 1;
-}
 
-.header > ul > li:first-child {
-    list-style-type: none;
-}
 
-.header > ul > li {
-    font-style: italic;
-}
 
 .header:hover, .header.editable {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     button.edit {
         display: block;
     }
 }
 
 
-ul.about-info {
+div.about-info {
     input, li {
         font-size: 0.8rem;
     }
