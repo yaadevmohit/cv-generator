@@ -3,7 +3,7 @@ import "./styles/header.css"
 
 interface HeaderProps {
     name: string;
-    aboutData: {key: number, fieldName: string, value: string}[];
+    aboutData: {city: string, email: string, githubUrl: string, linkedinUrl: string, phone: string};
     handleInputFn: (a: object) => void;
 }
 
@@ -15,22 +15,18 @@ const Header = ({name, aboutData, handleInputFn}: HeaderProps) => {
         setIsEditable(prevstate => !prevstate)
     }
 
-    const aboutInfoItems = aboutData.map(item => {
-        if(isEditable) {
-            return(<input type="text" key={item.key} name={item.fieldName} value={item.value}/>)
-        }
-        else {
-            return(<span className="about-info-item" key={item.key} >{item.value}</span>)
-        }
-    })
     return( 
         <>
             <section className={`header ${isEditable && "editable"}`}>
-                <button className="edit" onClick={handleClick}>{isEditable ? "Submit" : "Edit"}</button>
+                <button className="edit" onClick={handleClick}>{isEditable ? "Done" : "Edit"}</button>
                 {isEditable ? <input type="text" name="name" value={name} onChange={handleInputFn}/> : <h1>{name}</h1>}
-                <div className="about-info">
-                    {aboutInfoItems}
-                </div>
+                <ul className="about-info">
+                    <li>{isEditable ? <input type="text" value={aboutData.city} name="city" onChange={handleInputFn}/> : aboutData.city}</li>
+                    <li>{isEditable ? <input type="text" value={aboutData.email} name="email" onChange={handleInputFn}/> : aboutData.email}</li>
+                    <li>{isEditable ? <input type="text" value={aboutData.githubUrl} name="githubUrl" onChange={handleInputFn} placeholder="Enter github url"/> : <a href={aboutData.githubUrl} target="_blank">Github</a>}</li>
+                    <li>{isEditable ? <input type="text" value={aboutData.linkedinUrl} name="linkedinUrl" onChange={handleInputFn} placeholder="enter linkedin url"/> : <a href={aboutData.linkedinUrl} target="_blank">LinkedIn</a>}</li>
+                    <li>{isEditable ? <input type="text" value={aboutData.phone} name="phone" onChange={handleInputFn}/> : aboutData.phone}</li>
+                </ul>
             </section>
         </>
     )

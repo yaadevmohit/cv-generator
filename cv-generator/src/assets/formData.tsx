@@ -1,17 +1,18 @@
 export default {
     name: "Mohit Yadav",
-    about: [
-        {id: 0, fieldname: "city", value: "Toronto"},
-        {id: 1, fieldName: "email", value: "xyz@xyz.com"},
-        {id: 2, fieldName: "github", value: "github.com"},
-        {id: 3, fieldName: "linkedin", value: "linkedin.com"},
-        {id: 4, fieldName: "phone", value: "647-389-8460"},
-    ],
+    // city, email, github, linkedIn, phone
+    about: {
+        city: 'Toronto, ON',
+        email: "mohityadav@yyz.ca",
+        githubUrl: "",
+        linkedinUrl: "",
+        phone: "123-456-7890"
+    },
     objective: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam debitis, sint possimus quae pariatur laborum doloremque mollitia vitae minima, blanditiis reiciendis velit eos molestiae nemo, autem placeat sapiente. Ipsam?",
     skills: [
         {
             skillsGroupName: "",
-            skillGroupData: []
+            skillGroupData: [],
         },
     ],
     workExp: [
@@ -20,12 +21,13 @@ export default {
             jobTitle: "baller",
             location: "Toronto",
             startDate: "",
-            endData: "",
+            endDate: "",
             expPts: []
         }
     ],
     projects: [
-        {
+        {   
+            
             projectName: "Library",
             websiteLink: "",
             repoLink: "",

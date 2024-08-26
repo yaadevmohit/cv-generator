@@ -7,17 +7,27 @@ import defaultData from "../assets/formData"
 const Preview = () => {
 
     const [data, setData] = useState(defaultData);
-    console.log(data)
+    console.log(data.about)
 
-    const handleChange = (event: InputEvent) => {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const {name, value} = event.target;
         setData((prevData) => {
-            return({
+            if(name == "name") {
+                return({
                 ...prevData,
                 [name]: value,
-            })
+                })
+            }
+            else {
+                return({
+                    ...prevData,
+                    about: {
+                        ...prevData.about,
+                        [name]: value,
+                    },
+                })
+            }
         })
-        console.log(data.About[name])
     }
     return(
         <>

@@ -2,12 +2,13 @@
     position: relative;
     --btn-clr: #BBE9FF;
     --fs-size-primary: 1.5rem;
+    --fw--size-primary: 600;
     border: 1px solid transparent;
 }
 
 input, input:focus {
-    /* border: none; */
     outline: none;
+    /* border: none; */
 }
 
 .header > * {
@@ -15,16 +16,18 @@ input, input:focus {
 }
 
 .header > input {
+    font-weight: var(--fw--size-primary);
     font-size: var(--fs-size-primary);
     width: fit-content;
     text-align: center;
 }
 
 .header {
+    min-height: 4rem;
     h1{
         font-size: var(--fs-size-primary);
         text-align: center;
-        font-weight: 600;
+        font-weight: var(--fw--size-primary);
     }
     button {
         background-color: var(--btn-clr);
@@ -39,24 +42,26 @@ input, input:focus {
     }
     .about-info {
         display: flex;
+        margin: 0;
         align-items: center;
         justify-content: space-around;
-        flex-wrap: nowrap;
-        max-height: 3.9rem;
-        max-width: 32.5rem;
-        flex: 1;    
-    input, span {
-        font-size: 0.8rem;
-        width: fit-content;
-        text-align: center;
-        padding-inline: 1rem;
+        padding: 0;
+
+        input, li {
+            font-size: 0.8rem;
+            width: fit-content;
+            text-align: center;
+            margin: 0;
+        }
+
+        input {
+            max-width: 6rem;
+            /* border: none; */
+        }
     }
-    input {
-        max-width: 6rem;
-    }
-    }
-    .about-info > * + * {
-        border-left: 1px;
+    
+    .about-info > li:first-child {
+        list-style-type: none;
     }
 }
 
@@ -66,18 +71,13 @@ input, input:focus {
 
 
 .header:hover, .header.editable {
-    /* border: 1px solid black; */
     button.edit {
         display: block;
     }
 }
 
-
-div.about-info {
-    input, li {
-        font-size: 0.8rem;
-    }
-    input {
-        max-width: 5rem;
+.header.editable {
+    li {
+        list-style-type: none;
     }
 }
