@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Header from "./Header"
-// import Section from "./Section"
+import Section from "./Section"
 import "./styles/preview.css"
 import defaultData from "../assets/formData"
 
@@ -33,6 +33,7 @@ const Preview = () => {
         <>
             <div className="preview-container humainst-normal">
                 <Header name={data.name} aboutData={data.about} handleInputFn={handleChange}/>
+                <Section componentName="Objective"/>
             </div>
         </>
     )

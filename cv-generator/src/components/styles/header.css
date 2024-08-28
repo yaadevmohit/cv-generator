@@ -1,7 +1,7 @@
 .header {
     position: relative;
     --btn-clr: #BBE9FF;
-    --fs-size-primary: 1.4rem;
+    --fs-size-primary: 1.6rem;
     --fs-size-secondary: 0.8rem;
     --fw--size-primary: 600;
     --secondary-items-gap: 0.6rem;
@@ -43,6 +43,7 @@ input, input:focus {
     .about-info {
         display: flex;
         margin: 0;
+        padding: 0;
         align-items: center;
         justify-content: center;
 
@@ -50,6 +51,7 @@ input, input:focus {
             text-align: center;
             margin: 0;
             padding: 0;
+            min-width: 0;
         }
         li {
             margin-inline: 0.6rem;

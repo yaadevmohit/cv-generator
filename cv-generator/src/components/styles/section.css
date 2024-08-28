@@ -3,6 +3,8 @@
 }
 .section-container > h2 {
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
 }
 
 .section-container > hr {
