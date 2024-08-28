@@ -1,29 +1,33 @@
 .header {
     position: relative;
     --btn-clr: #BBE9FF;
-    --fs-size-primary: 1.5rem;
+    --fs-size-primary: 1.4rem;
+    --fs-size-secondary: 0.75rem;
     --fw--size-primary: 600;
+    --secondary-items-gap: 0.6rem;
     border: 1px solid transparent;
 }
 
 input, input:focus {
     outline: none;
-    /* border: none; */
+    border: none;
+    font-size: var(--fs-size-secondary);
 }
 
 .header > * {
     margin-block: 0.2rem;
 }
 
-.header > input {
+.header > input, .header > h1 {
     font-weight: var(--fw--size-primary);
     font-size: var(--fs-size-primary);
-    width: fit-content;
     text-align: center;
+    font-style: inherit;
 }
 
 .header {
     min-height: 4rem;
+    font-size: var(--fs-size-secondary);
     h1{
         font-size: var(--fs-size-primary);
         text-align: center;
@@ -44,14 +48,14 @@ input, input:focus {
         display: flex;
         margin: 0;
         align-items: center;
-        justify-content: space-around;
-        padding: 0;
+        justify-content: center;
+        width: 100%;
 
         input, li {
-            font-size: 0.8rem;
             width: fit-content;
             text-align: center;
             margin: 0;
+            padding: 0;
         }
 
         input {
@@ -63,6 +67,7 @@ input, input:focus {
     .about-info > li:first-child {
         list-style-type: none;
     }
+ 
 }
 
 
@@ -73,6 +78,9 @@ input, input:focus {
 .header:hover, .header.editable {
     button.edit {
         display: block;
+    }
+    input {
+        /* border: 1px solid black; */
     }
 }
 

@@ -4,7 +4,7 @@ import "./styles/header.css"
 interface HeaderProps {
     name: string;
     aboutData: {city: string, email: string, githubUrl: string, linkedinUrl: string, phone: string};
-    handleInputFn: (a: object) => void;
+    handleInputFn: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Header = ({name, aboutData, handleInputFn}: HeaderProps) => {

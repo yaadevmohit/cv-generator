@@ -33,12 +33,7 @@ const Preview = () => {
         <>
             <div className="preview-container humainst-normal">
                 <Header name={data.name} aboutData={data.about} handleInputFn={handleChange}/>
-                <Section title="Objective"/>
-                <Section title="Skills"/>
-                <Section title="Work Experience"/>
-                <Section title="Projects"/>
-                <Section title="Education"/>
-                <Section title="Certifications"/>
+                <Header name={data.name} aboutData={data.about} handleInputFn={handleChange}/>
             </div>
         </>
     )

@@ -1,11 +1,12 @@
 .preview-container {
-    width: 34rem;
-    height: 44rem;
-    border: 2px solid red;
-    padding: 0.6rem;
+    width: 768px;
+    height: 998.40px;
+    border: 1px solid rgb(201, 193, 193);
+    padding: 38.4px;
+    font-size: 0.75rem;
+    background-color: white;
 }
 
-.preview-container > * {
-    margin-block: 0.4rem;
-    /* border: 1px solid red; */
+.preview-container > * + * {
+    margin-block: 1rem;
 }
