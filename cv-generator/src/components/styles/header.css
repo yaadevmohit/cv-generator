@@ -2,15 +2,14 @@
     position: relative;
     --btn-clr: #BBE9FF;
     --fs-size-primary: 1.4rem;
-    --fs-size-secondary: 0.75rem;
+    --fs-size-secondary: 0.8rem;
     --fw--size-primary: 600;
     --secondary-items-gap: 0.6rem;
-    border: 1px solid transparent;
+    padding: 0;
 }
 
 input, input:focus {
     outline: none;
-    border: none;
     font-size: var(--fs-size-secondary);
 }
 
@@ -23,16 +22,13 @@ input, input:focus {
     font-size: var(--fs-size-primary);
     text-align: center;
     font-style: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
-    min-height: 4rem;
+    min-height: 3.1rem;
     font-size: var(--fs-size-secondary);
-    h1{
-        font-size: var(--fs-size-primary);
-        text-align: center;
-        font-weight: var(--fw--size-primary);
-    }
     button {
         background-color: var(--btn-clr);
         border: none;
@@ -49,19 +45,16 @@ input, input:focus {
         margin: 0;
         align-items: center;
         justify-content: center;
-        width: 100%;
 
         input, li {
-            width: fit-content;
             text-align: center;
             margin: 0;
             padding: 0;
         }
-
-        input {
-            max-width: 6rem;
-            /* border: none; */
+        li {
+            margin-inline: 0.6rem;
         }
+
     }
     
     .about-info > li:first-child {
@@ -70,22 +63,9 @@ input, input:focus {
  
 }
 
-
-
-
-
-
 .header:hover, .header.editable {
+    border: 1px solid grey;
     button.edit {
         display: block;
-    }
-    input {
-        /* border: 1px solid black; */
-    }
-}
-
-.header.editable {
-    li {
-        list-style-type: none;
     }
 }

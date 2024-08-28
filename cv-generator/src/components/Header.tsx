@@ -21,11 +21,11 @@ const Header = ({name, aboutData, handleInputFn}: HeaderProps) => {
                 <button className="edit" onClick={handleClick}>{isEditable ? "Done" : "Edit"}</button>
                 {isEditable ? <input type="text" name="name" value={name} onChange={handleInputFn}/> : <h1>{name}</h1>}
                 <ul className="about-info">
-                    <li>{isEditable ? <input type="text" value={aboutData.city} name="city" onChange={handleInputFn}/> : aboutData.city}</li>
-                    <li>{isEditable ? <input type="text" value={aboutData.email} name="email" onChange={handleInputFn}/> : aboutData.email}</li>
-                    <li>{isEditable ? <input type="text" value={aboutData.githubUrl} name="githubUrl" onChange={handleInputFn} placeholder="Enter github url"/> : <a href={aboutData.githubUrl} target="_blank">Github</a>}</li>
-                    <li>{isEditable ? <input type="text" value={aboutData.linkedinUrl} name="linkedinUrl" onChange={handleInputFn} placeholder="enter linkedin url"/> : <a href={aboutData.linkedinUrl} target="_blank">LinkedIn</a>}</li>
-                    <li>{isEditable ? <input type="text" value={aboutData.phone} name="phone" onChange={handleInputFn}/> : aboutData.phone}</li>
+                    {isEditable ? <input type="text" value={aboutData.city} name="city" onChange={handleInputFn}/> : <li>{aboutData.city}</li>}
+                    {isEditable ? <input type="text" value={aboutData.email} name="email" onChange={handleInputFn}/> : <li>{aboutData.email}</li>}
+                    {isEditable ? <input type="text" value={aboutData.githubUrl} name="githubUrl" onChange={handleInputFn} placeholder="Enter github url"/> : <li><a href={aboutData.githubUrl} target="_blank">Github</a></li>}
+                    {isEditable ? <input type="text" value={aboutData.linkedinUrl} name="linkedinUrl" onChange={handleInputFn} placeholder="enter linkedin url"/> : <li><a href={aboutData.linkedinUrl} target="_blank">LinkedIn</a></li>}
+                    {isEditable ? <input type="text" value={aboutData.phone} name="phone" onChange={handleInputFn}/> : <li>{aboutData.phone}</li>}
                 </ul>
             </section>
         </>
