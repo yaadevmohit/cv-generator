@@ -32,8 +32,14 @@ const Preview = () => {
     return(
         <>
             <div className="preview-container humainst-normal">
-                <Header name={data.name} aboutData={data.about} handleInputFn={handleChange}/>
-                <Section componentName="Objective"/>
+                <Header 
+                    name={data.name} 
+                    aboutData={data.about} 
+                    handleInputFn={handleChange} 
+                />
+                <Section 
+                    componentName={"Objective"} 
+                />
             </div>
         </>
     )
